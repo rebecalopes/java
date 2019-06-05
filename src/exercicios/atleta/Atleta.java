@@ -2,7 +2,7 @@ package exercicios.atleta;
 
 public class Atleta {
 
-    public String nome;
+    private String nome;
     public int nivel;
     public int energia;
 

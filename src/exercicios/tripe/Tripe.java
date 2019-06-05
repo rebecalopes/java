@@ -34,62 +34,62 @@ public class Tripe {
         return alturaAtual;
     }
 
+
+
     public void setAlturaAtual(int alturaAtual) {
         this.alturaAtual = alturaAtual;
     }
 
-    public Tripe (boolean dobrado){
-        this.dobrado= dobrado;
-    }
-
-    public void Altura(Integer novaAltura){
-
-        alturaAtual = alturaAtual + novaAltura;
-
-    }
-
-    public void dobrar(){
-        if (dobrado) {
-            System.out.println("O tripé já está dobrado");
-        }
-
-    }
-    public void desdobrar(){
-        if (!dobrado) {
-            System.out.println("Desdobrado");
-            }
-    }
-
-    public void guardar(){
-        if(prontoParaGuardar()){
-            System.out.println("Guardado");
-        }
+    public Tripe(boolean dobrado, int alturaMinima, int alturaMaxima, int alturaAtual) {
+        this.dobrado = dobrado;
+        this.alturaMinima = alturaMinima;
+        this.alturaMaxima = alturaMaxima;
+        this.alturaAtual = alturaAtual;
     }
 
 
-    public boolean prontoParaGuardar(){
-        if(dobrado){
+    public void definirAltura(Integer novaAltura) {
+        this.alturaAtual = novaAltura;
+    }
+
+    public void dobrar() {
+        this.dobrado = true;
+        System.out.println("O tripé já está dobrado");
+    }
+
+    public void desdobrar() {
+        this.dobrado = false;
+        System.out.println("Desdobrado");
+    }
+
+    public boolean guardar() {
+        this.dobrado = true;
+        this.alturaAtual = alturaMinima;
+        System.out.println("Guardado");
+
+        return true;
+    }
+
+    public void prontoParaGuardar() {
+        if (guardar()) {
             System.out.println("Pronto para guardar");
-            return true;
-            } else {
-            System.out.println("Dobre para guardar");
-            return false;
-        }
-    }
-
-    public void usar(){
-        if(prontoParaUsar()) {
-            System.out.println("Pode usar");
-        }
-    }
-    public boolean prontoParaUsar(){
-        if (!dobrado){
-            System.out.println("Pronto para usar");
-            return true;
         } else {
-            System.out.println("Desdobre primeiro para poder usar");
-            return false;
+            System.out.println("Dobre para guardar");
         }
+    }
 
+    public boolean usar() {
+        if (!this.dobrado && this.alturaAtual > this.alturaMaxima / 2)
+            System.out.println("Usando");
+        return true;
+    }
+
+    public void prontoParaUsar() {
+        if (usar()) {
+            System.out.println("Pronto para usar");
+        } else {
+            System.out.println("Desdobre para usar");
+        }
     }
 }
+

@@ -1,6 +1,6 @@
 package exercicios.atleta;
 
-public class Main {
+public class exercicio3 {
 
     public static void main(String[] args) {
 

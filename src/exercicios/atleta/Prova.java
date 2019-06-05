@@ -11,7 +11,7 @@ public class Prova {
 
     public boolean podeRealizar(Atleta atleta){
 
-        if (atleta.nivel <= dificuldade && atleta.energia <= this.energiaNecessaria ){
+        if (atleta.nivel <= this.dificuldade && atleta.energia <= this.energiaNecessaria ){
             System.out.println("O atleta não é capaz!");
             return false;
         } else {

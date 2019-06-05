@@ -3,13 +3,12 @@ package exercicios.tripe;
 public class exercicio4 {
     public static void main(String[] args) {
 
-        Tripe tripe = new Tripe(true);
+        Tripe tripe = new Tripe(true, 20,40,40);
 
         tripe.dobrar();
-        tripe.guardar();
+        tripe.prontoParaGuardar();
         tripe.usar();
-        tripe.desdobrar();
-        tripe.usar();
+
         System.out.println(tripe);
 
     }
