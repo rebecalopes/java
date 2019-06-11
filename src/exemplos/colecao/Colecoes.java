@@ -1,4 +1,4 @@
-package exemplos;
+package exemplos.colecao;
 
 import java.util.*;
 
