@@ -17,11 +17,6 @@ public class Departamento {
 
     }
 
-    public void aumentaSalario(Departamento departamento, double aumento){
-        for (Funcionario funcionario: funcionarioDoDepartamento)
-            funcionario.setSalario(Funcionario.salario * aumento = Funcionario.salario);
-    }
-
     @Override
     public String toString() {
         return "Departamento{" +

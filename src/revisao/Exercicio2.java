@@ -6,9 +6,13 @@ public class Exercicio2 {
 
     public static void main(String[] args) {
 
+        //Comprar a idade de 3 pessoas
+
         PessoaEx2 pessoa1 = new PessoaEx2();
         PessoaEx2 pessoa2 = new PessoaEx2();
         PessoaEx2 pessoa3 = new PessoaEx2();
+
+        //Pegar dado do usuario
 
         Scanner dado = new Scanner(System.in);
         System.out.println("Digite o nome da 1º pessoa");
@@ -33,5 +37,7 @@ public class Exercicio2 {
         pessoa3.setIdade(dado.nextInt());
 
         pessoa3.ehMaisVelho(pessoa1,pessoa2,pessoa3);
+
+        pessoa3.ehMaisNovo(pessoa1, pessoa2, pessoa3);
     }
 }
